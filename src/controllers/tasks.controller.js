@@ -1,25 +1,27 @@
 import Task from '../models/task.model.js'
-const axios = require ('axios')
+import axios from 'axios';
 
 
-export const getTasks = async (req, res) => {}
 
-export const createTasks = async (req, res) => {
+export const getProducts = async (req, res) => {
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
         url: 'https://offcorss.myvtex.com/api/catalog_system/pub/products/search/',
         headers: { }
     };
-      
-    axios.request(config)
-      .then((response) => {
-    console.log(JSON.stringify(response.data));
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+    
+    try {
+        const response = await axios.request(config);
+        // Envía la respuesta JSON al cliente
+        res.json(response.data);
+    } catch (error) {
+        console.error('Error al realizar la solicitud:', error);
+        res.status(500).json({ error: 'Error al obtener los datos de la API' });
+    }    
 }
+
+export const createTasks = async (req, res) => {}
 
 export const getTask = async (req, res) => {}
 
