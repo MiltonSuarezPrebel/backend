@@ -9,7 +9,7 @@ const Productos = () => {
   
     useEffect(() => {
       // Configurar Axios para consumir la API
-      axios.get('http://localhost:4000/api/products')
+      axios.get('https://backend-mongodb-w0sd.onrender.com/api/products')
         .then((response) => {
           setProductos(response.data); // Guardar datos en el estado
           setLoading(false);           // Termina el estado de carga
