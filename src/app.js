@@ -9,7 +9,7 @@ import taskRoutes from './routes/task.routes.js'
 const app = express();
 
 app.use(cors({
-    origin: 'https://backend-black-seven-58.vercel.app',
+    origin: 'https://backend-ibqtigt28-miltonsuarezprebels-projects.vercel.app',
     credentials: true
 }))
 app.use(morgan('dev'));
