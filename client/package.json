@@ -1,13 +1,13 @@
 {
   "name": "client",
-  "private": true,
-  "homepage": "http://miltonSuarezPrebel.github.io/backend/client",
+  "private": true,  
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "predeploy": "npm run build",    
-    "deploy": "gh-pages -d build",
+  "homepage": "https://vgk.lhc.mybluehost.me/prueba/",
+  "scripts": {    
     "dev": "vite",
+    "predeploy": "npm run build",    
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
