@@ -9,7 +9,7 @@ import taskRoutes from './routes/task.routes.js'
 const app = express();
 
 app.use(cors({
-    origin: 'https://vgk.lhc.mybluehost.me',
+    origin: 'http://vgk.lhc.mybluehost.me/website_4c2d66e5',
     credentials: true
 }))
 app.use(morgan('dev'));
