@@ -3,7 +3,6 @@
   "private": true,  
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://vgk.lhc.mybluehost.me/prueba/",
   "scripts": {    
     "dev": "vite",
     "predeploy": "npm run build",    
