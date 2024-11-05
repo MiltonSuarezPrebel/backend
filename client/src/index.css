@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+    width: 20%;
+    float: left;
+    height: 500px;
+    margin: 1.25% 2.5%;
+}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .row {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .card {
+    display: block; /* Asegúrate de que el enlace ocupe toda la tarjeta */
+    padding: 20px;
+    background-color: #f1f1f1; /* Color de fondo */
+    border: 1px solid #ddd; /* Borde de la tarjeta */
+    text-decoration: none; /* Sin subrayado en el texto */
+    color: #000; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto de transición */
+    height: 500px;
+  }
+  
+  .card:hover {
+    background-color: #e2e2e2; /* Color de fondo al pasar el mouse */
+  }
