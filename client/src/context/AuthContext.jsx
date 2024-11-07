@@ -22,6 +22,10 @@ export const AuthProvider = ({children}) => {
         try {
             const res = await registerRequest(user)
             console.log(res.data);
+            Cookies.set("id", res.data.id, {
+                expires: 7,
+              });
+            localStorage.setItem('token', res.data.id);
             setUser(res.data);
             setIsAuthenticated(true);
         } catch (error) {
