@@ -7,7 +7,7 @@ const LogoutPage = () => {
 
   useEffect(() => {
     // Eliminar el token de autenticación al montar el componente
-    localStorage.removeItem('authToken');
+    localStorage.removeItem('token');
     
     // Redirigir al usuario al login
     navigate('/login');
