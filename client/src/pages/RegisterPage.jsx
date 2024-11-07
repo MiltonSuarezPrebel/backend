@@ -60,6 +60,32 @@ function RegisterPage() {
             }
         </div>
         <div class="mv3">
+          <label class="db fw6 lh-copy f6" for="name">Nombre</label>
+            <input 
+                type="text" {...register("name", {required: true})}
+                className='b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100'
+                placeholder='Name'
+            />
+            {
+                errors.name && (
+                    <p className='text-red-500'>Nombre es requerido</p>
+                )
+            }
+        </div>
+        <div class="mv3">
+          <label class="db fw6 lh-copy f6" for="lastname">Apellido</label>
+            <input 
+                type="text" {...register("lastname", {required: true})}
+                className='b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100'
+                placeholder='Name'
+            />
+            {
+                errors.name && (
+                    <p className='text-red-500'>Apellido es requerido</p>
+                )
+            }
+        </div>
+        <div class="mv3">
             <label class="db fw6 lh-copy f6" for="password">Contraseña</label>
             <input 
                 type="password" {...register("password", {required: true})}
